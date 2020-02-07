@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'hd as'
+    'mn as'
+    'nv as'
+    'ft as';
+}
+
+header {
+    grid-area: hd;
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+aside {
+    grid-area: as;
+    display: grid;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+   
+}
+
+aside img {
+    height: 100%;
+    position: relative;
+    right: 310px;
+}
+
+main {
+    grid-area: mn;
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+nav {
+    grid-area: nv;
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+footer {
+    grid-area: ft;
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
