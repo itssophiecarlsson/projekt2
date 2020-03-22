@@ -184,6 +184,7 @@ slider {
       display: grid;
       height: 100vh;
       width: 100vw;
+      grid-template-columns: 25% 25% 25% 25%;
       grid-template-areas:
       'hd hd hd hd'
       'nv nv nv nv'
@@ -203,6 +204,16 @@ slider {
 #nav2 {
     grid-area: nv;
     background-color: midnightblue;
+
+}
+
+#nav2div {
+    grid-area: nv;
+    text-align: center;
+    color: lightcoral;
+    
+
+
 }
 
 #main2 {
