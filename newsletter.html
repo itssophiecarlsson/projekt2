@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="container4">
+    <header id="header4">
+        <h1 id="portfoliotitle">Martin Carlsson Photography</h1>
+    </header>
+    
+    <nav id="nav4">
+        <li class="nav4list">
+            <a href="index.html" class="textlinks"><h2>Home</h2></a>
+            <a href="about.html" class="textlinks"><h2>About</h2></a>
+            <a href="portfolio.html" class="textlinks"><h2>Portfolio</h2></a>
+            <a href="newsletter.html" class="textlinks"><h2>Newsletter</h2></a>
+            <div class="dropdown">
+            <h2 class="textlinks">Cart</h2>
+            <div class="dropdown-content">
+            <p>Your cart is empty.</p>
+        </div>
+        </div>
+        </li>
+    </nav>
+    
+    <main id="main4">
+        <h1 id="h1newsletter">Newsletter</h1>
+        <h3 id="h3newsletter">Stay connected! Receive updates on my most recent projects,
+            <a href="portfolio.html">portfolio</a> or <a>fine art prints</a>.</h3>
+            <p id="pnewsletter">Like with my photography, it's always about quality over quantity- I
+                usually don't send more than one email per month.</p>
+                
+<!-- Button to open the modal -->
+<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id01" class="modal">
+    
+  <span onclick="document.getElementById('form').style.display='none'"></span>
+
+  <form class="formcontent" action="newsletter.html">
+
+    <div class="container">
+        <label for="fullname"><b>Full Name</b></label>
+        <input type="text" placeholder="ex. John Doe" name="fullname" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="ex. Johndoe@example.com" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Min. 5 characters" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to the Terms & Privacy of Martin Carlsson Photography.</p>
+
+      <div class="buttons">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+</main>
+
+<aside id="aside4">
+    <img id="profilepicture" src="img/dad2.jpg" alt="Martin Carlsson">
+</aside>
+
+    </div>
+    </body>
+    </html>
