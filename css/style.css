@@ -89,6 +89,63 @@
     margin: -25px;
 }
 
+slider {
+    display: block;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: relative;
+   }
+
+   slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+   }
+
+   slide:nth-child(1){
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(../img/profilbild.jpg);
+    background-size: cover;
+    background-position: center;
+   }
+
+   slide:nth-child(2){
+    animation-delay: 2s;
+    background-image: url(../img/cheetah2.jpg);
+    background-size: cover;
+    background-position: center;
+   }
+
+   slide:nth-child(3){
+    animation-delay: 5s;
+    background-image: url(../img/mum3.jpg);
+    background-size: cover;
+    background-position: center;
+   }
+
+   slide:nth-child(4){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(../img/scottish-man.jpg);
+    background-size: cover;
+    background-position: center;
+   }
+
+   @keyframes slide {
+    0% { left: 100%; width: 100%; }
+    5% { left: 0%; }
+    25% { left: 0%; }
+    30% { left: -100%; width: 100%; }
+    30.0001% { left: -100%; width: 0%; }
+    100% { left: 100%; width: 0%; }
+   }
+
    .button {
     border: 3px solid white;
     color: white;
@@ -116,6 +173,7 @@
       display: grid;
       width: 100vw;
       grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 15% 6% 64% 15%;
       grid-template-areas:
       'hd hd hd hd hd'
       'nv nv nv nv nv'
@@ -149,7 +207,7 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
     color: white;
 
 }
@@ -161,7 +219,6 @@
 
 #main2 {
     grid-area: mn;
-    background-color: rgb(230, 230, 230);
 }
 
 #maindiv1 {
@@ -175,7 +232,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 10px 0px 20px 0px;
+    margin: 5px 0px 20px 0px;
 }
 
 .pictures {
@@ -185,11 +242,22 @@
     margin: 5px;
 }
 
-
 #footer2 {
-    grid-area: ft;
-    background-color: pink;
-}
+        grid-area: ft;
+        display: flex;
+        justify-content: center;
+        color: white;
+        position: relative;
+        bottom: -105px;
+        background-color: black;
+    }
+
+#footer2 img {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    }
 
 .pictures:hover {
     transform: scale(1.2);
@@ -216,48 +284,6 @@
     display: block;
   }
 
-
-  @media only screen and (max-width:839px) {
-
-    #container3 {
-        display: grid;
-        width: 100vw;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-areas:
-        'hd'
-        'nv'
-        'mn'
-        'as';
-    }
-    
-    #mainsquare {
-        grid-area: mn;
-    }
-    #header3 {
-        grid-area: hd;
-    }
-    
-    #nav3 {
-        grid-area: nv;
-    }
-    
-    .nav3list {
-        grid-area: nv;
-  }
-
-  #aside3 {
-    grid-area: as;
-}
-
-#profilepicture {
-    grid-area: as;
-}
-
-
-}
-
-
-
 /*ABOUT*/
   #container3 {
     display: grid;
@@ -278,6 +304,10 @@
     height: 100px;
 }
 
+#abouttitle {
+    margin: 15px;
+}
+
 #nav3 {
     grid-area: nv;
     display: inline-block;
@@ -289,8 +319,12 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
     color: white;
+}
+
+li {
+    list-style: none;
 }
 
 .textlinks {
@@ -321,6 +355,8 @@
   .maintext1 {
     background-color: white;
     display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #maintext2 {
@@ -387,7 +423,7 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
     color: white;
 }
 
@@ -518,3 +554,307 @@ button:hover {
   border-radius: 25px;
   width: 50%;
 }
+
+/*INDEX IPHONE 11*/
+@media only screen and (max-width:700px) {
+    #container1 {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-areas:
+        'hd'
+        'mn'
+        'nv'
+        'ft';
+    }
+
+body {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0px;
+}
+
+#header1 {
+    grid-area: hd;
+}
+
+#aside1 {
+    grid-area: as;
+    display: none;
+}
+
+#indextitle {
+    font-size: 20px;
+    margin: 20px;
+}
+
+#h2index {
+   font-size: 35px;
+   margin-top: -75px;
+   width: 100%;
+   position: relative;
+   right: -75px;
+}
+
+#h3index {
+    font-size: 15px;
+}
+
+#h4index {
+    font-size: 13px;
+    width: 100%;
+    position: relative;
+    right: -15px;
+}
+
+#main1 {
+    grid-area: mn;
+}
+
+#nav1 {
+    grid-area: nv;
+}
+
+#footer1 {
+    grid-area: ft;
+}
+
+.button {
+    border: 2px solid white;
+    font-size: 17px;
+    margin: 20px 20px;
+    width: 115px;
+    height: 50px;
+  }
+}
+
+/*PORTFOLIO IPHONE 11*/
+@media only screen and (max-width:700px) {
+    #container2 {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-areas:
+        'hd' 
+        'nv'
+        'mn'
+        'ft';
+    }
+    body {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+    #header2 {
+        grid-area: hd;
+    }
+
+    #nav2 {
+        grid-area: nv;
+    }
+
+    #footer2 {
+        grid-area: ft;
+    }
+
+    #main2 {
+        grid-area: mn;
+        justify-content: space-evenly;
+    }
+
+    #maindiv1 {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0px 20px 0px;
+    }
+    
+    #maindiv2 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0px 20px 0px;
+    }
+    
+    .pictures {
+        display: flex;
+        position: relative;
+        height: 10vh;
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        margin: 5px;
+    }
+
+}
+
+
+
+
+
+
+
+/*ABOUT IPHONE 11*/
+@media only screen and (max-width:700px) {
+    #container3 {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-areas:
+        'hd' 
+        'nv'
+        'mn'
+        'as';
+    }
+
+    body {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+    #header3 {
+        grid-area: hd;
+    }
+
+    #nav3 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 1vh;
+        background-color: black;
+    }
+
+    .burger {
+        margin-right: 50px;
+        cursor: pointer;
+        position: relative;
+        top: -35px;
+        right: -20px;
+    }
+
+    .textlinks {
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav3list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        right: 0px;
+        height: 45vh;
+        top: -87vh;
+        background-color: black;
+        align-items: center;
+        width: 25%;
+        transition: all 1s;
+        z-index: 1;
+    }
+
+    .nav3Active {
+        transform: translateY(100vh);
+    }
+
+    .nav3list {
+        list-style: none;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        border-radius: 10%;
+        transition: all 0.3s;
+    }
+
+    .dropdown-content {
+        font-size: 20px;
+        display: none;
+        position: absolute;
+        margin-left: 10px;
+        background-color: black;
+        min-width: 50px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px;
+        z-index: 1;
+      }
+      
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      
+    .toggle .line2 {
+        opacity: 0;
+      }
+      
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+    #main3 {
+        grid-area: mn;
+    }
+
+    .maintext1 {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        margin: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #maintext2 {
+        font-size: 2.5vw;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+    }
+    
+    #mainsquare {
+        grid-area: mn;
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #aside3 {
+        grid-area: as;
+    }
+    
+    #abouttitle {
+        font-size: 25px;
+        margin: 20px;
+    }
+
+    #profilepicture {
+        grid-area: as;
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0%;
+        position: relative;
+        margin-top: 10px;
+    }
+}
+

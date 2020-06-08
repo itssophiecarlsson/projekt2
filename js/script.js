@@ -1,8 +1,10 @@
-//Newsletter Sign-Up Forum Code, unsure if it works.
+//Burger for the mobile page.
+const nav3 = document.querySelector('.nav3list')
+const burger = document.querySelector('.burger')
 
-var modal = document.getElementById('form');
-{
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+function toggleMeny(){
+    nav3.classList.toggle('nav3Active')
+    burger.classList.toggle('toggle')
 }
+
+document.querySelector('.burger').addEventListener('click', toggleMeny)
