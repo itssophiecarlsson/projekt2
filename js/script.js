@@ -1,9 +1,9 @@
 //Burger for the mobile page.
-const nav3 = document.querySelector('.nav3list')
+const nav = document.querySelector('.navlist')
 const burger = document.querySelector('.burger')
 
 function toggleMeny(){
-    nav3.classList.toggle('nav3Active')
+    nav.classList.toggle('navActive')
     burger.classList.toggle('toggle')
 }
 
